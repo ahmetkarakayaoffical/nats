@@ -14,6 +14,8 @@ type Notification struct {
 }
 
 type CertificationRequest struct {
+	FullName     string `json:"fullname,omitempty"`
+	Email        string `json:"email,omitempty"`
 	Username     string `json:"username,omitempty"`
 	Organization string `json:"organization,omitempty"`
 	Country      string `json:"country,omitempty"`
