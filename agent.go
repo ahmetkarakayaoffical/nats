@@ -95,8 +95,7 @@ type AgentReport struct {
 	OS              string           `json:"os,omitempty"`
 	Hostname        string           `json:"hostname,omitempty"`
 	Version         string           `json:"version,omitempty"`
-	FirstContact    time.Time        `json:"first_contact,omitempty"`
-	LastContact     time.Time        `json:"last_contact,omitempty"`
+	ExecutionTime   time.Time        `json:"execution_time,omitempty"`
 	Enabled         bool             `json:"enable,omitempty"`
 	IP              string           `json:"ip,omitempty"`
 	Computer        Computer         `json:"computer,omitempty"`
