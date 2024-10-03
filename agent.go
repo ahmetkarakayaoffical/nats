@@ -112,6 +112,6 @@ type AgentReport struct {
 }
 
 type InstallAction struct {
-	AgentID   string
-	PackageID string
+	AgentID   string `json:"agentId,omitempty"`
+	PackageID string `json:"packageId,omitempty"`
 }
