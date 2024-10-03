@@ -110,3 +110,8 @@ type AgentReport struct {
 	Applications    []Application    `json:"apps,omitempty"`
 	LoggedOnUsers   []LoggedOnUser   `json:"loggedonusers,omitempty"`
 }
+
+type InstallAction struct {
+	AgentID   string
+	PackageID string
+}
