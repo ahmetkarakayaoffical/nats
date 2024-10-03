@@ -91,24 +91,25 @@ type LoggedOnUser struct {
 }
 
 type AgentReport struct {
-	AgentID         string           `json:"id,omitempty"`
-	OS              string           `json:"os,omitempty"`
-	Hostname        string           `json:"hostname,omitempty"`
-	Version         string           `json:"version,omitempty"`
-	ExecutionTime   time.Time        `json:"execution_time,omitempty"`
-	Enabled         bool             `json:"enable,omitempty"`
-	IP              string           `json:"ip,omitempty"`
-	Computer        Computer         `json:"computer,omitempty"`
-	Antivirus       Antivirus        `json:"antivirus,omitempty"`
-	OperatingSystem OperatingSystem  `json:"operatingsystem,omitempty"`
-	LogicalDisks    []LogicalDisk    `json:"logicaldisks,omitempty"`
-	Monitors        []Monitor        `json:"monitors,omitempty"`
-	Printers        []Printer        `json:"printers,omitempty"`
-	Shares          []Share          `json:"shares,omitempty"`
-	SystemUpdate    SystemUpdate     `json:"systemupdate,omitempty"`
-	NetworkAdapters []NetworkAdapter `json:"networkadapters,omitempty"`
-	Applications    []Application    `json:"apps,omitempty"`
-	LoggedOnUsers   []LoggedOnUser   `json:"loggedonusers,omitempty"`
+	AgentID            string           `json:"id,omitempty"`
+	OS                 string           `json:"os,omitempty"`
+	Hostname           string           `json:"hostname,omitempty"`
+	Version            string           `json:"version,omitempty"`
+	ExecutionTime      time.Time        `json:"execution_time,omitempty"`
+	Enabled            bool             `json:"enable,omitempty"`
+	IP                 string           `json:"ip,omitempty"`
+	Computer           Computer         `json:"computer,omitempty"`
+	Antivirus          Antivirus        `json:"antivirus,omitempty"`
+	OperatingSystem    OperatingSystem  `json:"operatingsystem,omitempty"`
+	LogicalDisks       []LogicalDisk    `json:"logicaldisks,omitempty"`
+	Monitors           []Monitor        `json:"monitors,omitempty"`
+	Printers           []Printer        `json:"printers,omitempty"`
+	Shares             []Share          `json:"shares,omitempty"`
+	SystemUpdate       SystemUpdate     `json:"systemupdate,omitempty"`
+	NetworkAdapters    []NetworkAdapter `json:"networkadapters,omitempty"`
+	Applications       []Application    `json:"apps,omitempty"`
+	LoggedOnUsers      []LoggedOnUser   `json:"loggedonusers,omitempty"`
+	SupportedVNCServer string           `json:"vnc,omitempty"`
 }
 
 type InstallAction struct {
