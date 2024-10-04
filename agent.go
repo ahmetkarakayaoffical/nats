@@ -111,8 +111,3 @@ type AgentReport struct {
 	LoggedOnUsers      []LoggedOnUser   `json:"loggedonusers,omitempty"`
 	SupportedVNCServer string           `json:"vnc,omitempty"`
 }
-
-type InstallAction struct {
-	AgentID   string `json:"agentId,omitempty"`
-	PackageID string `json:"packageId,omitempty"`
-}
