@@ -98,6 +98,7 @@ type AgentReport struct {
 	ExecutionTime      time.Time        `json:"execution_time,omitempty"`
 	Enabled            bool             `json:"enable,omitempty"`
 	IP                 string           `json:"ip,omitempty"`
+	MACAddress         string           `json:"mac,omitempty"`
 	Computer           Computer         `json:"computer,omitempty"`
 	Antivirus          Antivirus        `json:"antivirus,omitempty"`
 	OperatingSystem    OperatingSystem  `json:"operatingsystem,omitempty"`
