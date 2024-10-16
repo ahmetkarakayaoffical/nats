@@ -85,6 +85,12 @@ type Application struct {
 	Publisher   string `json:"publisher,omitempty"`
 }
 
+type Update struct {
+	Title      string    `json:"title,omitempty"`
+	Date       time.Time `json:"date,omitempty"`
+	SupportURL string    `json:"support_url,omitempty"`
+}
+
 type LoggedOnUser struct {
 	Name      string    `json:"name,omitempty"`
 	LastLogon time.Time `json:"last_logon,omitempty"`
@@ -111,4 +117,5 @@ type AgentReport struct {
 	Applications       []Application    `json:"apps,omitempty"`
 	LoggedOnUsers      []LoggedOnUser   `json:"loggedonusers,omitempty"`
 	SupportedVNCServer string           `json:"vnc,omitempty"`
+	Updates            []Update         `json:"updates,omitempty"`
 }
