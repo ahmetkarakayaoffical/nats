@@ -13,15 +13,15 @@ func ConnectWithNATS(servers, clientCert, clientKey, caCert string) (*nats.Conn,
 		nats.ClientCert(clientCert, clientKey),
 		nats.MaxReconnects(-1),
 		nats.ReconnectHandler(func(nc *nats.Conn) {
-			log.Println("[INFO]: ... reconnected to the message broker")
+			log.Println("[INFO]: reconnected to the message broker")
 		}),
 		nats.DisconnectErrHandler(func(nc *nats.Conn, err error) {
 			if err != nil {
-				log.Printf("[INFO]: ... disconnected from message broker due to: %s, will attempt reconnect", err.Error())
+				log.Printf("[INFO]: disconnected from message broker due to: %s, will attempt reconnect", err.Error())
 			}
 		}),
 		nats.ClosedHandler(func(nc *nats.Conn) {
-			log.Printf("[INFO]: ... connection closed. Reason: %q\n", nc.LastError())
+			log.Printf("[INFO]: connection closed. Reason: %q\n", nc.LastError())
 		}),
 	)
 
@@ -29,6 +29,6 @@ func ConnectWithNATS(servers, clientCert, clientKey, caCert string) (*nats.Conn,
 		return nil, err
 	}
 
-	log.Println("[INFO] ... connection established with NATS server")
+	log.Println("[INFO]: connection established with NATS server")
 	return c, nil
 }
