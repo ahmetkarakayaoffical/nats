@@ -57,15 +57,15 @@ func (ms *MessageServer) Connect() error {
 		nats.Secure(config),
 		nats.MaxReconnects(-1),
 		nats.ReconnectHandler(func(nc *nats.Conn) {
-			log.Println("... reconnected to the message broker")
+			log.Println("[INFO]: reconnected to the message broker")
 		}),
 		nats.DisconnectErrHandler(func(nc *nats.Conn, err error) {
 			if err != nil {
-				log.Printf("... disconnected from message broker due to: %s, will attempt reconnect", err.Error())
+				log.Printf("[INFO]: disconnected from message broker due to: %s, will attempt reconnect", err.Error())
 			}
 		}),
 		nats.ClosedHandler(func(nc *nats.Conn) {
-			log.Printf("... connection closed. Reason: %q\n", nc.LastError())
+			log.Printf("[INFO]: connection closed. Reason: %q\n", nc.LastError())
 		}),
 	)
 
@@ -73,7 +73,7 @@ func (ms *MessageServer) Connect() error {
 		return err
 	}
 
-	log.Println("... connection established with NATS server")
+	log.Println("[INFO]: connection established with NATS server")
 	ms.Connection = c
 	return nil
 }
