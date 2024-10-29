@@ -15,4 +15,5 @@ type CertificateRequest struct {
 	DaysValid      int      `json:"days_valid,omitempty"`
 	Password       string   `json:"password,omitempty"`
 	OCSPResponders []string `json:"ocsp_responders,omitempty"`
+	ConsoleURL     string   `json:"console_url,omitempty"`
 }
