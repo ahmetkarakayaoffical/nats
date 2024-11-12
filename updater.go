@@ -8,3 +8,8 @@ type OpenUEMUpdateRequest struct {
 	UpdateAt     time.Time `json:"updated_at,omitempty"`
 	UpdateNow    bool      `json:"update_now,omitempty"`
 }
+
+type OpenUEMRollbackRequest struct {
+	RollbackAt  time.Time `json:"updated_at,omitempty"`
+	RollbackNow bool      `json:"update_now,omitempty"`
+}
