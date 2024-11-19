@@ -122,3 +122,7 @@ type AgentReport struct {
 	LastUpdateTaskStatus        string           `json:"last_update_task_status,omitempty"`
 	LastUpdateTaskResult        string           `json:"last_update_task_result,omitempty"`
 }
+
+type Config struct {
+	AgentFrequency int `json:"agent_frequency,omitempty"`
+}
