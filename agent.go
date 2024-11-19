@@ -124,5 +124,6 @@ type AgentReport struct {
 }
 
 type Config struct {
-	AgentFrequency int `json:"agent_frequency,omitempty"`
+	Ok             bool `json:"ok,omitempty"`
+	AgentFrequency int  `json:"agent_frequency,omitempty"`
 }
