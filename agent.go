@@ -100,7 +100,7 @@ type AgentReport struct {
 	AgentID                     string           `json:"id,omitempty"`
 	OS                          string           `json:"os,omitempty"`
 	Hostname                    string           `json:"hostname,omitempty"`
-	Version                     AgentVersion     `json:"version,omitempty"`
+	Release                     Release          `json:"release,omitempty"`
 	ExecutionTime               time.Time        `json:"execution_time,omitempty"`
 	Enabled                     bool             `json:"enable,omitempty"`
 	IP                          string           `json:"ip,omitempty"`
@@ -128,7 +128,7 @@ type Config struct {
 	AgentFrequency int  `json:"agent_frequency,omitempty"`
 }
 
-type AgentVersion struct {
+type Release struct {
 	Version      string `json:"version,omitempty"`
 	Channel      string `json:"channel,omitempty"`
 	Summary      string `json:"summary,omitempty"`

@@ -52,7 +52,7 @@ func GetFakeAgent(index int) openuem_nats.AgentReport {
 	report.AgentID = UIDs[index]
 	report.OS = "windows"
 	report.Hostname = ComputerNames[index]
-	report.Version = openuem_nats.AgentVersion{
+	report.Release = openuem_nats.Release{
 		Version:      "0.1.0",
 		Channel:      "stable",
 		Summary:      "the initial version for OpenUEM agents",
