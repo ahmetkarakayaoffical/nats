@@ -129,11 +129,12 @@ type Config struct {
 }
 
 type Release struct {
-	Version      string `json:"version,omitempty"`
-	Channel      string `json:"channel,omitempty"`
-	Summary      string `json:"summary,omitempty"`
-	ReleaseNotes string `json:"release_notes,omitempty"`
-	FileURL      string `json:"file_url,omitempty"`
-	Checksum     string `json:"checksum,omitempty"`
-	IsCritical   bool   `json:"is_critical,omitempty"`
+	Version      string    `json:"version,omitempty"`
+	Channel      string    `json:"channel,omitempty"`
+	Summary      string    `json:"summary,omitempty"`
+	ReleaseNotes string    `json:"release_notes,omitempty"`
+	FileURL      string    `json:"file_url,omitempty"`
+	Checksum     string    `json:"checksum,omitempty"`
+	IsCritical   bool      `json:"is_critical,omitempty"`
+	ReleaseDate  time.Time `json:"release_date,omitempty"`
 }

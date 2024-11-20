@@ -61,6 +61,11 @@ func GetFakeAgent(index int) openuem_nats.AgentReport {
 		Checksum:     strings.ToLower("EBF59B5E859EAA1D5F07E2925D25079FDC95AAD46B558846C011625B401151FF"),
 		IsCritical:   false,
 	}
+
+	if releaseDate, err := time.Parse("2006-01-02", "2024-11-20"); err == nil {
+		report.Release.ReleaseDate = releaseDate
+	}
+
 	report.IP = fmt.Sprintf("192.168.1.%d", 60+index)
 	report.MACAddress = MACs[index]
 	report.SupportedVNCServer = VNCs[rand.Intn(len(VNCs))]
