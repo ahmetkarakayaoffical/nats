@@ -129,7 +129,7 @@ type Config struct {
 }
 
 type AgentVersion struct {
-	ID           string `json:"id,omitempty"`
+	Version      string `json:"version,omitempty"`
 	Channel      string `json:"channel,omitempty"`
 	Summary      string `json:"summary,omitempty"`
 	ReleaseNotes string `json:"release_notes,omitempty"`
