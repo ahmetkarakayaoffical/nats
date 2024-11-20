@@ -52,7 +52,15 @@ func GetFakeAgent(index int) openuem_nats.AgentReport {
 	report.AgentID = UIDs[index]
 	report.OS = "windows"
 	report.Hostname = ComputerNames[index]
-	report.Version = "0.1.0"
+	report.Version = openuem_nats.AgentVersion{
+		ID:           "0.1.0",
+		Channel:      "stable",
+		Summary:      "the initial version for OpenUEM agents",
+		ReleaseNotes: "http://lothlorien.openuem.eu:8888/docs/release-note-0.1.0.html",
+		FileURL:      "http://lothlorien.openuem.eu:8888/downloads/openuem-agent-0.1.0.exe",
+		Checksum:     strings.ToLower("EBF59B5E859EAA1D5F07E2925D25079FDC95AAD46B558846C011625B401151FF"),
+		IsCritical:   false,
+	}
 	report.IP = fmt.Sprintf("192.168.1.%d", 60+index)
 	report.MACAddress = MACs[index]
 	report.SupportedVNCServer = VNCs[rand.Intn(len(VNCs))]
