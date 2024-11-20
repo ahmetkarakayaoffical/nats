@@ -60,6 +60,8 @@ func GetFakeAgent(index int) openuem_nats.AgentReport {
 		FileURL:      "http://lothlorien.openuem.eu:8888/downloads/openuem-agent-0.1.0.exe",
 		Checksum:     strings.ToLower("EBF59B5E859EAA1D5F07E2925D25079FDC95AAD46B558846C011625B401151FF"),
 		IsCritical:   false,
+		Arch:         "amd64",
+		Os:           "windows",
 	}
 
 	if releaseDate, err := time.Parse("2006-01-02", "2024-11-20"); err == nil {

@@ -137,4 +137,6 @@ type Release struct {
 	Checksum     string    `json:"checksum,omitempty"`
 	IsCritical   bool      `json:"is_critical,omitempty"`
 	ReleaseDate  time.Time `json:"release_date,omitempty"`
+	Arch         string    `json:"arch,omitempty"`
+	Os           string    `json:"os,omitempty"`
 }
