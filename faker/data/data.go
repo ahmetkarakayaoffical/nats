@@ -68,6 +68,8 @@ func GetFakeAgent(index int) openuem_nats.AgentReport {
 		report.Release.ReleaseDate = releaseDate
 	}
 
+	report.VNCProxyPort = "1443"
+	report.SFTPPort = "2022"
 	report.IP = fmt.Sprintf("192.168.1.%d", 60+index)
 	report.MACAddress = MACs[index]
 	report.SupportedVNCServer = VNCs[rand.Intn(len(VNCs))]
