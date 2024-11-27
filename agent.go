@@ -102,7 +102,6 @@ type AgentReport struct {
 	Hostname                    string           `json:"hostname,omitempty"`
 	Release                     Release          `json:"release,omitempty"`
 	ExecutionTime               time.Time        `json:"execution_time,omitempty"`
-	Enabled                     bool             `json:"enable,omitempty"`
 	IP                          string           `json:"ip,omitempty"`
 	MACAddress                  string           `json:"mac,omitempty"`
 	SFTPPort                    string           `json:"sftp_port,omitempty"`
@@ -123,6 +122,7 @@ type AgentReport struct {
 	LastUpdateTaskExecutionTime time.Time        `json:"last_update_task_execution_time,omitempty"`
 	LastUpdateTaskStatus        string           `json:"last_update_task_status,omitempty"`
 	LastUpdateTaskResult        string           `json:"last_update_task_result,omitempty"`
+	CertificateReady            bool             `json:"certificate_ready,omitempty"`
 }
 
 type Config struct {
