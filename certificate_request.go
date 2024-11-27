@@ -19,3 +19,8 @@ type CertificateRequest struct {
 	AgentId        string   `json:"agentId,omitempty"`
 	DNSName        string   `json:"dns_name,omitempty"`
 }
+
+type AgentCertificateData struct {
+	CertBytes       []byte `json:"cert_bytes,omitempty"`
+	PrivateKeyBytes []byte `json:"private_key_bytes,omitempty"`
+}
