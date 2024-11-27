@@ -16,11 +16,6 @@ type CertificateRequest struct {
 	Password       string   `json:"password,omitempty"`
 	OCSPResponders []string `json:"ocsp_responders,omitempty"`
 	ConsoleURL     string   `json:"console_url,omitempty"`
-}
-
-type AgentCertificateRequest struct {
-	AgentId  string `json:"agentId,omitempty"`
-	Hostname string `json:"hostname,omitempty"`
-	Domain   string `json:"domain,omitempty"`
-	CertificateRequest
+	AgentId        string   `json:"agentId,omitempty"`
+	DNSName        string   `json:"dns_name,omitempty"`
 }
