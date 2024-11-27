@@ -22,4 +22,5 @@ type AgentCertificateRequest struct {
 	AgentId  string `json:"agentId,omitempty"`
 	Hostname string `json:"hostname,omitempty"`
 	Domain   string `json:"domain,omitempty"`
+	CertificateRequest
 }
