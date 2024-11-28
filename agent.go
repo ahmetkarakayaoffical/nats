@@ -123,6 +123,7 @@ type AgentReport struct {
 	LastUpdateTaskStatus        string           `json:"last_update_task_status,omitempty"`
 	LastUpdateTaskResult        string           `json:"last_update_task_result,omitempty"`
 	CertificateReady            bool             `json:"certificate_ready,omitempty"`
+	RestartRequired             bool             `json:"restart_required,omitempty"`
 }
 
 type Config struct {
