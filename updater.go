@@ -33,3 +33,20 @@ const UPDATE_SUCCESS = "admin.update.agents.task_status_success"
 func TaskUpdatePossibleStatus() []string {
 	return []string{UPDATE_ERROR, UPDATE_PENDING, UPDATE_SUCCESS}
 }
+
+type OpenUEMServerRelease struct {
+	Version         string                      `json:"version,omitempty"`
+	Channel         string                      `json:"channel,omitempty"`
+	Summary         string                      `json:"summary,omitempty"`
+	ReleaseNotesURL string                      `json:"release_notes,omitempty"`
+	ReleaseDate     time.Time                   `json:"release_date,omitempty"`
+	Files           map[string][]ServerFileInfo `json:"files,omitempty"`
+	IsCritical      bool                        `json:"is_critical,omitempty"`
+}
+
+type ServerFileInfo struct {
+	Arch     string `json:"arch,omitempty"`
+	Os       string `json:"os,omitempty"`
+	FileURL  string `json:"file_url,omitempty"`
+	Checksum string `json:"checksum,omitempty"`
+}
