@@ -3,6 +3,8 @@ package openuem_nats
 import "time"
 
 type OpenUEMUpdateRequest struct {
+	Version      string    `json:"version,omitempty"`
+	Channel      string    `json:"channel,omitempty"`
 	DownloadFrom string    `json:"download,omitempty"`
 	DownloadHash string    `json:"download_hash,omitempty"`
 	UpdateAt     time.Time `json:"updated_at,omitempty"`
