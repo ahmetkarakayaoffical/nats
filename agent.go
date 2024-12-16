@@ -144,3 +144,8 @@ type Release struct {
 	Arch         string    `json:"arch,omitempty"`
 	Os           string    `json:"os,omitempty"`
 }
+
+type VNCConnection struct {
+	PIN        string `json:"pin,omitempty"`
+	NotifyUser bool   `json:"notify_user,omitempty"`
+}
