@@ -16,7 +16,7 @@ func main() {
 		Name:      "openuem-fake-agents",
 		Commands:  []*cli.Command{FakeAgentsWorker()},
 		Usage:     "Manage an OpenUEM worker",
-		Authors:   []*cli.Author{{Name: "Miguel Angel Alvarez Cabrerizo", Email: "mcabrerizo@sologitops.com"}},
+		Authors:   []*cli.Author{{Name: "Miguel Angel Alvarez Cabrerizo", Email: "mcabrerizo@openuem.eu"}},
 		Copyright: "2024 - Miguel Angel Alvarez Cabrerizo <https://github.com/doncicuto>",
 	}
 
