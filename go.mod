@@ -1,6 +1,6 @@
 module github.com/open-uem/openuem_nats
 
-go 1.23.1
+go 1.23.4
 
 require (
 	github.com/brianvoe/gofakeit/v7 v7.1.2
