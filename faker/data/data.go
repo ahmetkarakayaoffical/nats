@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/brianvoe/gofakeit/v7"
-	"github.com/doncicuto/openuem_nats"
+	"github.com/open-uem/openuem_nats"
 )
 
 var ComputerNames = []string{"MINASTIRITH", "EDORAS", "GONDOLIN", "ISENGARD", "MORIA", "HOBITTON", "FANGORN", "BREE", "PELARGIR", "EREBOR", "GONDOR", "DOLAMROTH", "AMROTH", "OSGILIATH", "BELERIAND", "MINASMORGUL", "BELEGOST", "CIRITHUNGOL"}

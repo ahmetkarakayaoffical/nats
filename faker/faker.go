@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/doncicuto/openuem_nats"
-	"github.com/doncicuto/openuem_nats/faker/data"
+	"github.com/open-uem/openuem_nats"
+	"github.com/open-uem/openuem_nats/faker/data"
 	"github.com/urfave/cli/v2"
 )
 
@@ -17,7 +17,7 @@ func main() {
 		Commands:  []*cli.Command{FakeAgentsWorker()},
 		Usage:     "Manage an OpenUEM worker",
 		Authors:   []*cli.Author{{Name: "Miguel Angel Alvarez Cabrerizo", Email: "mcabrerizo@openuem.eu"}},
-		Copyright: "2024 - Miguel Angel Alvarez Cabrerizo <https://github.com/doncicuto>",
+		Copyright: "2024 - Miguel Angel Alvarez Cabrerizo <https://github.com/open-uem>",
 	}
 
 	if err := app.Run(os.Args); err != nil {
