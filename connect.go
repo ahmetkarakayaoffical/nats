@@ -1,4 +1,4 @@
-package openuem_nats
+package nats
 
 import (
 	"log"

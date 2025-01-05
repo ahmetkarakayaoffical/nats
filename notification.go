@@ -1,4 +1,4 @@
-package openuem_nats
+package nats
 
 type Notification struct {
 	From                   string `json:"from,omitempty"`

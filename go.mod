@@ -1,4 +1,4 @@
-module github.com/open-uem/openuem_nats
+module github.com/open-uem/nats
 
 go 1.23.4
 

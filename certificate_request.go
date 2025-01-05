@@ -1,4 +1,4 @@
-package openuem_nats
+package nats
 
 type CertificateRequest struct {
 	FullName       string   `json:"fullname,omitempty"`

@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/brianvoe/gofakeit/v7"
-	"github.com/open-uem/openuem_nats"
+	"github.com/open-uem/nats"
 )
 
 var ComputerNames = []string{"MINASTIRITH", "EDORAS", "GONDOLIN", "ISENGARD", "MORIA", "HOBITTON", "FANGORN", "BREE", "PELARGIR", "EREBOR", "GONDOR", "DOLAMROTH", "AMROTH", "OSGILIATH", "BELERIAND", "MINASMORGUL", "BELEGOST", "CIRITHUNGOL"}
@@ -44,15 +44,15 @@ func GetWindowsOSDescription(os string) string {
 	}
 }
 
-func GetFakeAgent(index int) openuem_nats.AgentReport {
+func GetFakeAgent(index int) nats.AgentReport {
 	faker := gofakeit.New(0)
-	updateStatus := openuem_nats.SystemUpdatePossibleStatus()
+	updateStatus := nats.SystemUpdatePossibleStatus()
 
-	report := openuem_nats.AgentReport{}
+	report := nats.AgentReport{}
 	report.AgentID = UIDs[index]
 	report.OS = "windows"
 	report.Hostname = ComputerNames[index]
-	report.Release = openuem_nats.Release{
+	report.Release = nats.Release{
 		Version: "0.1.0",
 		Channel: "stable",
 		Arch:    "amd64",

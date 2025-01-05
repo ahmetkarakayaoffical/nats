@@ -1,4 +1,4 @@
-package openuem_nats
+package nats
 
 const REGISTER_CERTIFICATE_SENT = "users.certificate_sent"
 const REGISTER_COMPLETE = "users.completed"

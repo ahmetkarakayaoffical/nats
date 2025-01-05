@@ -1,4 +1,4 @@
-package openuem_nats
+package nats
 
 const NOT_CONFIGURED = "systemupdate.not_configured"
 const DISABLED = "systemupdate.disabled"

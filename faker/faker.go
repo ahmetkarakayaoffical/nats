@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/open-uem/openuem_nats"
-	"github.com/open-uem/openuem_nats/faker/data"
+	"github.com/open-uem/nats"
+	"github.com/open-uem/nats/faker/data"
 	"github.com/urfave/cli/v2"
 )
 
@@ -34,7 +34,7 @@ func FakeAgentsWorker() *cli.Command {
 	}
 }
 func fakeAgentsStart(cCtx *cli.Context) error {
-	conn, err := openuem_nats.ConnectWithNATS(cCtx.String("nats-servers"), cCtx.String("cert"), cCtx.String("key"), cCtx.String("cacert"))
+	conn, err := nats.ConnectWithNATS(cCtx.String("nats-servers"), cCtx.String("cert"), cCtx.String("key"), cCtx.String("cacert"))
 	if err != nil {
 		return err
 	}
