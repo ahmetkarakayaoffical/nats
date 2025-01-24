@@ -149,3 +149,7 @@ type VNCConnection struct {
 	PIN        string `json:"pin,omitempty"`
 	NotifyUser bool   `json:"notify_user,omitempty"`
 }
+
+type RebootOrRestart struct {
+	Date time.Time `json:"date,omitempty"`
+}
