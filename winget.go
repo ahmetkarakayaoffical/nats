@@ -14,6 +14,8 @@ type WingetCfgReport struct {
 	Success   bool   `json:"success,omitempty"`
 }
 
+// WingetCfgDeploy allows the agent to inform if a package
+// has been installed or desinstalled using Winget configure
 type WingetCfgDeploy struct {
 	PackageID string `json:"PackageID,omitempty"`
 	Installed bool   `json:"installed,omitempty"`
