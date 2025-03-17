@@ -10,8 +10,9 @@ type WingetCfgProfiles struct {
 }
 
 type WingetCfgReport struct {
-	ProfileID int  `json:"profileID,omitempty"`
-	Success   bool `json:"success,omitempty"`
+	ProfileID int    `json:"profileID,omitempty"`
+	AgentID   string `json:"agentID,omitempty"`
+	Success   bool   `json:"success,omitempty"`
 }
 
 // WingetCfgDeploy allows the agent to inform if a package
