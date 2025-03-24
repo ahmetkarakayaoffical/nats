@@ -107,6 +107,7 @@ type AgentReport struct {
 	SFTPPort                    string           `json:"sftp_port,omitempty"`
 	VNCProxyPort                string           `json:"vnc_proxy_port,omitempty"`
 	Enabled                     bool             `json:"enabled,omitempty"`
+	DebugMode                   bool             `json:"debug,omitempty"`
 	Computer                    Computer         `json:"computer,omitempty"`
 	Antivirus                   Antivirus        `json:"antivirus,omitempty"`
 	OperatingSystem             OperatingSystem  `json:"operatingsystem,omitempty"`
