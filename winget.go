@@ -5,6 +5,12 @@ type WingetPackage struct {
 	Name string `json:"name,omitempty"`
 }
 
+type SoftwarePackage struct {
+	ID     string `json:"ID,omitempty"`
+	Name   string `json:"name,omitempty"`
+	Source string `json:"source,omitempty"`
+}
+
 type WingetCfgProfiles struct {
 	AgentID string `json:"agentID,omitempty"`
 }

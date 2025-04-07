@@ -11,4 +11,5 @@ type DeployAction struct {
 	PackageVersion string    `json:"packageversion,omitempty"`
 	Repository     string    `json:"repository,omitempty"`
 	Info           string    `json:"info,omitempty"`
+	Failed         bool      `json:"failed,omitempty"`
 }
