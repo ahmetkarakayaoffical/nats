@@ -129,10 +129,11 @@ type AgentReport struct {
 }
 
 type Config struct {
-	Ok              bool `json:"ok,omitempty"`
-	AgentFrequency  int  `json:"agent_frequency,omitempty"`
-	WinGetFrequency int  `json:"winget_frequency,omitempty"`
-	SFTPDisabled    bool `json:"sftp_disabled,omitempty"`
+	Ok                       bool `json:"ok,omitempty"`
+	AgentFrequency           int  `json:"agent_frequency,omitempty"`
+	WinGetFrequency          int  `json:"winget_frequency,omitempty"`
+	SFTPDisabled             bool `json:"sftp_disabled,omitempty"`
+	RemoteAssistanceDisabled bool `json:"remote_assistance_disabled,omitempty"`
 }
 
 type Release struct {
