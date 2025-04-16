@@ -157,3 +157,11 @@ type VNCConnection struct {
 type RebootOrRestart struct {
 	Date time.Time `json:"date,omitempty"`
 }
+
+type AgentSetting struct {
+	DebugMode        bool
+	SFTPService      bool
+	RemoteAssistance bool
+	SFTPPort         string
+	VNCProxyPort     string
+}
