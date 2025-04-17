@@ -108,24 +108,26 @@ type AgentReport struct {
 	VNCProxyPort                string           `json:"vnc_proxy_port,omitempty"`
 	Enabled                     bool             `json:"enabled,omitempty"`
 	DebugMode                   bool             `json:"debug,omitempty"`
-	Computer                    Computer         `json:"computer,omitempty"`
-	Antivirus                   Antivirus        `json:"antivirus,omitempty"`
+	Computer                    Computer         `json:"computer"`
+	Antivirus                   Antivirus        `json:"antivirus"`
 	OperatingSystem             OperatingSystem  `json:"operatingsystem,omitempty"`
 	LogicalDisks                []LogicalDisk    `json:"logicaldisks,omitempty"`
 	Monitors                    []Monitor        `json:"monitors,omitempty"`
 	Printers                    []Printer        `json:"printers,omitempty"`
 	Shares                      []Share          `json:"shares,omitempty"`
-	SystemUpdate                SystemUpdate     `json:"systemupdate,omitempty"`
+	SystemUpdate                SystemUpdate     `json:"systemupdate"`
 	NetworkAdapters             []NetworkAdapter `json:"networkadapters,omitempty"`
 	Applications                []Application    `json:"apps,omitempty"`
 	LoggedOnUsers               []LoggedOnUser   `json:"loggedonusers,omitempty"`
 	SupportedVNCServer          string           `json:"vnc,omitempty"`
 	Updates                     []Update         `json:"updates,omitempty"`
-	LastUpdateTaskExecutionTime time.Time        `json:"last_update_task_execution_time,omitempty"`
+	LastUpdateTaskExecutionTime time.Time        `json:"last_update_task_execution_time"`
 	LastUpdateTaskStatus        string           `json:"last_update_task_status,omitempty"`
 	LastUpdateTaskResult        string           `json:"last_update_task_result,omitempty"`
 	CertificateReady            bool             `json:"certificate_ready,omitempty"`
 	RestartRequired             bool             `json:"restart_required,omitempty"`
+	SftpServiceDisabled         bool             `json:"sftp_service_disabled,omitempty"`
+	RemoteAssistanceDisabled    bool             `json:"remote_assistance_disabled,omitempty"`
 }
 
 type Config struct {
