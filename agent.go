@@ -39,9 +39,19 @@ type LogicalDisk struct {
 }
 
 type Monitor struct {
-	Manufacturer string `json:"manufacturer,omitempty"`
-	Model        string `json:"model,omitempty"`
-	Serial       string `json:"serial,omitempty"`
+	Manufacturer      string `json:"manufacturer,omitempty"`
+	Model             string `json:"model,omitempty"`
+	Serial            string `json:"serial,omitempty"`
+	WeekOfManufacture string `json:"week_of_manufacture,omitempty"`
+	YearOfManufacture string `json:"year_of_manufacture,omitempty"`
+}
+
+type MemorySlot struct {
+	Slot         string `json:"slot,omitempty"`
+	Size         string `json:"size,omitempty"`
+	MemoryType   string `json:"type,omitempty"`
+	SerialNumber string `json:"serial_number,omitempty"`
+	PartNumber   string `json:"part_number,omitempty"`
 }
 
 type Printer struct {
@@ -110,9 +120,10 @@ type AgentReport struct {
 	DebugMode                   bool             `json:"debug,omitempty"`
 	Computer                    Computer         `json:"computer"`
 	Antivirus                   Antivirus        `json:"antivirus"`
-	OperatingSystem             OperatingSystem  `json:"operatingsystem,omitempty"`
+	OperatingSystem             OperatingSystem  `json:"operatingsystem"`
 	LogicalDisks                []LogicalDisk    `json:"logicaldisks,omitempty"`
 	Monitors                    []Monitor        `json:"monitors,omitempty"`
+	MemorySlots                 []MemorySlot     `json:"memoryslots,omitempty"`
 	Printers                    []Printer        `json:"printers,omitempty"`
 	Shares                      []Share          `json:"shares,omitempty"`
 	SystemUpdate                SystemUpdate     `json:"systemupdate"`
