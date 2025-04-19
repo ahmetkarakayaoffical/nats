@@ -52,6 +52,7 @@ type MemorySlot struct {
 	MemoryType   string `json:"type,omitempty"`
 	SerialNumber string `json:"serial_number,omitempty"`
 	PartNumber   string `json:"part_number,omitempty"`
+	Speed        string `json:"speed,omitempty"`
 }
 
 type Printer struct {
