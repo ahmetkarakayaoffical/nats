@@ -4,7 +4,7 @@ go 1.24.2
 
 require (
 	github.com/brianvoe/gofakeit/v7 v7.1.2
-	github.com/nats-io/nats.go v1.41.2
+	github.com/nats-io/nats.go v1.41.0
 	github.com/urfave/cli/v2 v2.27.5
 )
 
