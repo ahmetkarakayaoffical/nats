@@ -61,7 +61,7 @@ type Printer struct {
 	Port      string `json:"port,omitempty"`
 	IsDefault bool   `json:"is_default,omitempty"`
 	IsNetwork bool   `json:"is_network,omitempty"`
-	Shared    bool   `json:"is_shared,omitempty"`
+	IsShared  bool   `json:"is_shared,omitempty"`
 }
 
 type Share struct {
