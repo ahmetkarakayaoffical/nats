@@ -142,6 +142,8 @@ type AgentReport struct {
 	RestartRequired             bool             `json:"restart_required,omitempty"`
 	SftpServiceDisabled         bool             `json:"sftp_service_disabled,omitempty"`
 	RemoteAssistanceDisabled    bool             `json:"remote_assistance_disabled,omitempty"`
+	Tenant                      string           `json:"tenant,omitempty"`
+	Site                        string           `json:"site,omitempty"`
 }
 
 type Config struct {
