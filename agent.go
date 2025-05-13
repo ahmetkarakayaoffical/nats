@@ -183,3 +183,9 @@ type AgentSetting struct {
 	SFTPPort         string
 	VNCProxyPort     string
 }
+
+type RemoteConfigRequest struct {
+	AgentID  string `json:"agentID,omitempty"`
+	TenantID string `json:"tenantID,omitempty"`
+	SiteID   string `json:"siteID,omitempty"`
+}
