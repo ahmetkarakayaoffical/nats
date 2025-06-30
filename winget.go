@@ -11,10 +11,6 @@ type SoftwarePackage struct {
 	Source string `json:"source,omitempty"`
 }
 
-type WingetCfgProfiles struct {
-	AgentID string `json:"agentID,omitempty"`
-}
-
 type WingetCfgReport struct {
 	ProfileID int    `json:"profileID,omitempty"`
 	AgentID   string `json:"agentID,omitempty"`
