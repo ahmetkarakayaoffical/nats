@@ -189,3 +189,10 @@ type RemoteConfigRequest struct {
 	TenantID string `json:"tenantID,omitempty"`
 	SiteID   string `json:"siteID,omitempty"`
 }
+
+type RustDesk struct {
+	CustomRendezVousServer string `json:"customRendezVousServer,omitempty"`
+	RelayServer            string `json:"relayServer,omitempty"`
+	APIServer              string `json:"apiServer,omitempty"`
+	Key                    string `json:"key,omitempty"`
+}
