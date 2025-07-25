@@ -196,3 +196,8 @@ type RustDesk struct {
 	APIServer              string `json:"apiServer,omitempty"`
 	Key                    string `json:"key,omitempty"`
 }
+
+type RustDeskResult struct {
+	Error      string `json:"error"`
+	RustDeskID string `json:"id"`
+}
