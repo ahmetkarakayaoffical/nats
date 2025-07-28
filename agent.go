@@ -196,7 +196,7 @@ type RustDesk struct {
 	RelayServer            string `json:"relayServer,omitempty"`
 	APIServer              string `json:"apiServer,omitempty"`
 	Key                    string `json:"key,omitempty"`
-	UsePermanentPassword   bool   `json:"usePermanentPassword,omitempty"`
+	PermanentPassword      string `json:"permanentPassword,omitempty"`
 	Whitelist              string `json:"whitelist,omitempty"`
 	DirectIPAccess         bool   `json:"directIPAccess,omitempty"`
 }
