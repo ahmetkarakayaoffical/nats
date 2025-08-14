@@ -145,6 +145,7 @@ type AgentReport struct {
 	Tenant                      string           `json:"tenant,omitempty"`
 	Site                        string           `json:"site,omitempty"`
 	HasRustDesk                 bool             `json:"has_rust_desk,omitempty"`
+	HasRustDeskService          bool             `json:"has_rust_desk_service,omitempty"`
 }
 
 type Config struct {
