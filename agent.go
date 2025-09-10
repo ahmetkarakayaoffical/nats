@@ -40,7 +40,7 @@ type LogicalDisk struct {
 
 type PhysicalDisk struct {
 	DeviceID     string `json:"device_id,omitempty"`
-	Model        int8   `json:"model,omitempty"`
+	Model        string `json:"model,omitempty"`
 	SerialNumber string `json:"serial_number,omitempty"`
 	SizeInUnits  string `json:"size_in_units,omitempty"`
 }
