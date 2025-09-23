@@ -38,6 +38,13 @@ type LogicalDisk struct {
 	BitLockerStatus       string `json:"bitlocker_status,omitempty"`
 }
 
+type PhysicalDisk struct {
+	DeviceID     string `json:"device_id,omitempty"`
+	Model        string `json:"model,omitempty"`
+	SerialNumber string `json:"serial_number,omitempty"`
+	SizeInUnits  string `json:"size_in_units,omitempty"`
+}
+
 type Monitor struct {
 	Manufacturer      string `json:"manufacturer,omitempty"`
 	Model             string `json:"model,omitempty"`
@@ -125,6 +132,7 @@ type AgentReport struct {
 	Antivirus                   Antivirus        `json:"antivirus"`
 	OperatingSystem             OperatingSystem  `json:"operatingsystem"`
 	LogicalDisks                []LogicalDisk    `json:"logicaldisks,omitempty"`
+	PhysicalDisks               []PhysicalDisk   `json:"physicaldisks,omitempty"`
 	Monitors                    []Monitor        `json:"monitors,omitempty"`
 	MemorySlots                 []MemorySlot     `json:"memoryslots,omitempty"`
 	Printers                    []Printer        `json:"printers,omitempty"`
