@@ -152,6 +152,8 @@ type AgentReport struct {
 	RemoteAssistanceDisabled    bool             `json:"remote_assistance_disabled,omitempty"`
 	Tenant                      string           `json:"tenant,omitempty"`
 	Site                        string           `json:"site,omitempty"`
+	HasRustDesk                 bool             `json:"has_rust_desk,omitempty"`
+	HasRustDeskService          bool             `json:"has_rust_desk_service,omitempty"`
 }
 
 type Config struct {
@@ -196,4 +198,19 @@ type RemoteConfigRequest struct {
 	AgentID  string `json:"agentID,omitempty"`
 	TenantID string `json:"tenantID,omitempty"`
 	SiteID   string `json:"siteID,omitempty"`
+}
+
+type RustDesk struct {
+	CustomRendezVousServer string `json:"customRendezVousServer,omitempty"`
+	RelayServer            string `json:"relayServer,omitempty"`
+	APIServer              string `json:"apiServer,omitempty"`
+	Key                    string `json:"key,omitempty"`
+	PermanentPassword      string `json:"permanentPassword,omitempty"`
+	Whitelist              string `json:"whitelist,omitempty"`
+	DirectIPAccess         bool   `json:"directIPAccess,omitempty"`
+}
+
+type RustDeskResult struct {
+	Error      string `json:"error"`
+	RustDeskID string `json:"id"`
 }
