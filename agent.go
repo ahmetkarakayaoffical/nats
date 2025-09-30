@@ -152,6 +152,7 @@ type AgentReport struct {
 	RemoteAssistanceDisabled    bool             `json:"remote_assistance_disabled,omitempty"`
 	Tenant                      string           `json:"tenant,omitempty"`
 	Site                        string           `json:"site,omitempty"`
+	IsWayland                   bool             `json:"is_wayland,omitempty"`
 	HasRustDesk                 bool             `json:"has_rust_desk,omitempty"`
 	HasRustDeskService          bool             `json:"has_rust_desk_service,omitempty"`
 }
