@@ -155,6 +155,7 @@ type AgentReport struct {
 	IsWayland                   bool             `json:"is_wayland,omitempty"`
 	HasRustDesk                 bool             `json:"has_rust_desk,omitempty"`
 	HasRustDeskService          bool             `json:"has_rust_desk_service,omitempty"`
+	IsFlatpakRustDesk           bool             `json:"is_flatpak_rust_desk,omitempty"`
 }
 
 type Config struct {
