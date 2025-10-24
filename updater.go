@@ -2,7 +2,7 @@ package nats
 
 import "time"
 
-type OpenUEMUpdateRequest struct {
+type scnorionplusUpdateRequest struct {
 	Version      string    `json:"version,omitempty"`
 	Channel      string    `json:"channel,omitempty"`
 	DownloadFrom string    `json:"download,omitempty"`
@@ -18,7 +18,7 @@ type FileInfo struct {
 	Checksum string `json:"checksum,omitempty"`
 }
 
-type OpenUEMRelease struct {
+type scnorionplusRelease struct {
 	Version         string     `json:"version,omitempty"`
 	Channel         string     `json:"channel,omitempty"`
 	Summary         string     `json:"summary,omitempty"`
@@ -36,7 +36,7 @@ func TaskUpdatePossibleStatus() []string {
 	return []string{UPDATE_ERROR, UPDATE_PENDING, UPDATE_SUCCESS}
 }
 
-type OpenUEMServerRelease struct {
+type scnorionplusServerRelease struct {
 	Version         string                      `json:"version,omitempty"`
 	Channel         string                      `json:"channel,omitempty"`
 	Summary         string                      `json:"summary,omitempty"`

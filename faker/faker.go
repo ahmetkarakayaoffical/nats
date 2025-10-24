@@ -6,18 +6,18 @@ import (
 	"os"
 	"time"
 
-	"github.com/open-uem/nats"
-	"github.com/open-uem/nats/faker/data"
+	"github.com/ahmetkarakayaoffical//nats"
+	"github.com/ahmetkarakayaoffical/nats/faker/data"
 	"github.com/urfave/cli/v2"
 )
 
 func main() {
 	app := &cli.App{
-		Name:      "openuem-fake-agents",
+		Name:      "scnorionplus-fake-agents",
 		Commands:  []*cli.Command{FakeAgentsWorker()},
-		Usage:     "Manage an OpenUEM worker",
-		Authors:   []*cli.Author{{Name: "Miguel Angel Alvarez Cabrerizo", Email: "mcabrerizo@openuem.eu"}},
-		Copyright: "2024 - Miguel Angel Alvarez Cabrerizo <https://github.com/open-uem>",
+		Usage:     "Manage an scnorionplus worker",
+		Authors:   []*cli.Author{{Name: "SCN GLOBAL", Email: "info@scncore.com"}},
+		Copyright: "2024 - SCN CORE  <wwww.scncore.com>",
 	}
 
 	if err := app.Run(os.Args); err != nil {
@@ -28,7 +28,7 @@ func main() {
 func FakeAgentsWorker() *cli.Command {
 	return &cli.Command{
 		Name:   "start",
-		Usage:  "Start the OpenUEM Fake Agents worker",
+		Usage:  "Start the scnorionplus Fake Agents worker",
 		Flags:  flags(),
 		Action: fakeAgentsStart,
 	}
